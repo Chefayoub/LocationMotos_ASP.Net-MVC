@@ -1,0 +1,66 @@
+﻿@model LocationMotos_ASP.Net_MVC.Models.Location
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Moto.Carburant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moto.Carburant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroTel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroTel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDLocation }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
