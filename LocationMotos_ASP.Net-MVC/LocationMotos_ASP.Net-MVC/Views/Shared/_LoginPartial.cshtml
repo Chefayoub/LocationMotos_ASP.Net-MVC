@@ -6,6 +6,19 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
+        <li class="nav navbar-nav navbar-left">
+            @Html.ActionLink("Clients", "Index", "Clients");
+        </li>
+        <li class="nav navbar-nav navbar-left">
+            @Html.ActionLink("Locations", "Index", "Locations");
+        </li>
+        <li class="nav navbar-nav navbar-left">
+            @Html.ActionLink("Marques", "Index", "Marques");
+        </li>
+        <li class="nav navbar-nav navbar-left">
+            @Html.ActionLink("Motos", "Index", "Motos");
+        </li>
+
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>

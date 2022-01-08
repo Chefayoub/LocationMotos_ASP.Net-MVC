@@ -12,17 +12,10 @@ namespace LocationMotos_ASP.Net_MVC.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        [Authorize]
+        public ActionResult AccueilConnecter()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Bienvenur";
 
             return View();
         }

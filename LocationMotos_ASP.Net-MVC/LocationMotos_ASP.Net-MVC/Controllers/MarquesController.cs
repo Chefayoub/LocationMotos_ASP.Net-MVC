@@ -10,6 +10,7 @@ using LocationMotos_ASP.Net_MVC.Models;
 
 namespace LocationMotos_ASP.Net_MVC.Controllers
 {
+    [Authorize]
     public class MarquesController : Controller
     {
         private LocMotoDbContext db = new LocMotoDbContext();
