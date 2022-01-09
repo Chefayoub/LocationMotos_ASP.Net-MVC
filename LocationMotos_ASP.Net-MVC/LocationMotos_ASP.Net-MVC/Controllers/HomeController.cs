@@ -2,22 +2,67 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Net;
+using System.Data.Entity;
 using System.Web.Mvc;
+using LocationMotos_ASP.Net_MVC.Models;
+using LocationMotos_ASP.Net_MVC.ViewModels;
 
 namespace LocationMotos_ASP.Net_MVC.Controllers
 {
     public class HomeController : Controller
     {
+        private LocMotoDbContext db = new LocMotoDbContext();
+
+        // Addition de 2 nombres
+        public string Ajouter(int valeur1, int valeur2)
+        {
+            int resultat = valeur1 + valeur2;
+            return resultat.ToString();
+        }
+
+        [AllowAnonymous]
         public ActionResult Index()
         {
-            return View();
+            var motos = db.Motos.ToList();
+            var marques = db.Marques.ToList();
+
+            var rep = from c in marques
+                      join r in motos on c.IDMarque equals r.IDMarque
+                      select new LocationMotos_ASP.Net_MVC.ViewModels.AfficheMotoViewModels { marqueInfo = c, motoInfo = r };
+
+            return View(rep);
         }
+
         [Authorize]
         public ActionResult AccueilConnecter()
         {
-            ViewBag.Message = "Bienvenur";
+            ViewBag.Message = "Bienvenue";
 
-            return View();
+            var clients = db.Clients.ToList();
+            var reservations = db.Locations.ToList();
+
+            var rep = from c in clients
+                      join r in reservations on c.IDClient equals r.IDClient
+                      where r.Date_debut.Day == DateTime.Now.Day
+                      select new LocationMotos_ASP.Net_MVC.ViewModels.LocDuJourViewModels { clientInfo = c, locInfo = r };
+
+            return View(rep);
+        }
+
+        [Route("/Home/ChercheMoto/{id}")]
+        public ActionResult ChercheMoto(int id)
+        {
+            ViewBag.MarqueM = id;
+            Marques marques = new Marques();
+            Marque marque = marques.ObtenirListeMoto().FirstOrDefault(c => c.IDMarque == id);
+            if (marque != null)
+            {
+                ViewBag.MarqueM = marque.MarqueM;
+                ViewBag.Model = marque.Model;
+                return View("Trouve");
+            }
+            return View("NonTrouve");
         }
     }
 }

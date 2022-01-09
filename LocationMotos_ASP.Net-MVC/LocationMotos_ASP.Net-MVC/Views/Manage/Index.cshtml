@@ -3,7 +3,7 @@
     ViewBag.Title = "Gérer";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>Modification possible sur votre profil</h2>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
@@ -11,7 +11,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>Mot de passe :</dt>
-        <dd>
+        <dd class="btn-group alert-danger" >
             [
             @if (Model.HasPassword)
             {

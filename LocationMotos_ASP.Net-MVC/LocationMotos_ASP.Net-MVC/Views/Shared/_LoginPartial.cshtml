@@ -3,27 +3,34 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li class="nav navbar-nav navbar-left">
-            @Html.ActionLink("Clients", "Index", "Clients");
-        </li>
-        <li class="nav navbar-nav navbar-left">
-            @Html.ActionLink("Locations", "Index", "Locations");
-        </li>
-        <li class="nav navbar-nav navbar-left">
-            @Html.ActionLink("Marques", "Index", "Marques");
-        </li>
-        <li class="nav navbar-nav navbar-left">
-            @Html.ActionLink("Motos", "Index", "Motos");
-        </li>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    @Html.ActionLink("Universal Motors Rent", "AccueilConnecter", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav navbar-nav navbar-left">
+                        @Html.ActionLink("Clients", "Index", "Clients");
+                    </li>
+                    <li class="nav navbar-nav navbar-left">
+                        @Html.ActionLink("Locations", "Index", "Locations");
+                    </li>
+                    <li class="nav navbar-nav navbar-left">
+                        @Html.ActionLink("Marques", "Index", "Marques");
+                    </li>
+                    <li class="nav navbar-nav navbar-left">
+                        @Html.ActionLink("Motos", "Index", "Motos");
+                    </li>
 
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Se déconnecter</a></li>
-    </ul>
+                    <li>
+                        @Html.ActionLink("Mon compte", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    </li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Se déconnecter</a></li>
+                </ul>
+            </div>
+        </div>
     }
 }
 else
@@ -33,3 +40,6 @@ else
         <li>@Html.ActionLink("Se connecter", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }
+
+
+

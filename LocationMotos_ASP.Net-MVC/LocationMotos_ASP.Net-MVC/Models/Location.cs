@@ -9,10 +9,10 @@ namespace LocationMotos_ASP.Net_MVC.Models
     {
         public int IDLocation { get; set; }
 
-        public string Nom { get; set; }
-        public string Prenom { get; set; }
-        public string Adresse { get; set; }
-        public string NumeroTel { get; set; }
+        public string FraisDeLocation { get; set; }
+        public DateTime Date_debut { get; set; }
+        public DateTime Date_fin { get; set; }
+
 
         //Pour chaque location il y a un client
         public int IDClient { get; set; }

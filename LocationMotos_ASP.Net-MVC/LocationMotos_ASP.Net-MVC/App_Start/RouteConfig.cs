@@ -13,6 +13,13 @@ namespace LocationMotos_ASP.Net_MVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Test /Ajouter/4/5
+            routes.MapRoute(
+               name: "Ajouter",
+               url: "Ajouter/{valeur1}/{valeur2}",
+               defaults: new { controller = "Home", action = "Ajouter", valeur1 = 0, valeur2 = 0 }
+           );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

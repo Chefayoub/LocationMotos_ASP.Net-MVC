@@ -120,10 +120,11 @@ D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\Loca
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\bin\fr\Microsoft.Owin.Security.Google.resources.dll
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\bin\fr\Microsoft.Owin.Security.Twitter.resources.dll
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\bin\fr\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net-MVC.csproj.AssemblyReference.cache
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net-MVC.csproj.CoreCompileInputs.cache
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net-MVC.csproj.CopyComplete
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net-MVC.dll
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net-MVC.pdb
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net_MVC.Migrations.creationBdMotoAuth.resources
 D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net-MVC.csproj.GenerateResource.cache
+D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net-MVC.csproj.AssemblyReference.cache
+D:\Documents\BLOC_3\ASP.NET MVC\EXAMEN\AA_LocMoto\LocationMotos_ASP.Net-MVC\LocationMotos_ASP.Net-MVC\obj\Debug\LocationMotos_ASP.Net_MVC.Migrations.AjoutValidation.resources

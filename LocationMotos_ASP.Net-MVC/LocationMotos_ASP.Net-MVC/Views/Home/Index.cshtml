@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<LocationMotos_ASP.Net_MVC.ViewModels.AfficheMotoViewModels>
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -7,24 +8,69 @@
     <p style="text-align:center" class="lead">Veuillez vous connecter ou créer un compte pour louer une moto.</p>
 </div>
 
+<h2>Liste de nos motos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.marqueInfo.IDMarque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.IDMoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marqueInfo.MarqueM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marqueInfo.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.Carburant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.Kilometrage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.Disponible)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.marqueInfo.IDMarque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.IDMoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marqueInfo.MarqueM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marqueInfo.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.Carburant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.Kilometrage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.Disponible)
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h4>Recherche sur la table moto</h4>
+
+        <button class="btn-toolbar"> @Html.ActionLink("Recherche sur la table", "ChercheMoto", "Home") </button>
     </div>
 </div>

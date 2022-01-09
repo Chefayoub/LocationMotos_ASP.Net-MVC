@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<LocationMotos_ASP.Net_MVC.Models.Client>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Clients";
 }
 
-<h2>Index</h2>
+<h2>Table Clients</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -26,26 +23,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Prenom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adresse)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroTel)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDClient }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IDClient }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDClient })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroTel)
+            </td>
+            <td class="btn alert-info">
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDClient })
+            </td>
+            <td class="btn alert-danger">
+                @Html.ActionLink("Delete", "Delete", new { id = item.IDClient })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<h5>Veuillez ajouter un client : </h5>
+<button class="btn alert-success">
+    @Html.ActionLink("Ajouter", "Create")
+</button>

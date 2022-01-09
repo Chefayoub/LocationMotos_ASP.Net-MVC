@@ -1,15 +1,13 @@
 ﻿@model IEnumerable<LocationMotos_ASP.Net_MVC.Models.Marque>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Marques";
 }
 
-<h2>Index</h2>
+<h2>Table Marques</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+
+<table class="table active">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.MarqueM)
@@ -20,20 +18,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MarqueM)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Model)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDMarque }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IDMarque }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDMarque })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarqueM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td class="btn alert-info">
+                @Html.ActionLink("Edit", "Edit", new { id = item.IDMarque }) 
+            </td>
+            <td class="btn alert-danger">
+                @Html.ActionLink("Delete", "Delete", new { id = item.IDMarque })
+            </td>
+        </tr>
+    }
 
 </table>
+
+<h5>Veuillez ajouter une marque de moto : </h5>
+<button class="btn alert-success">
+    @Html.ActionLink("Ajouter", "Create")
+</button>

@@ -1,33 +1,31 @@
 ﻿@model IEnumerable<LocationMotos_ASP.Net_MVC.Models.Location>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Locations";
 }
 
-<h2>Index</h2>
+<h2>Table Locations</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Client.Nom)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Moto.Carburant)
+            @Html.DisplayNameFor(model => model.Moto.IDMoto)
+        </th>
+        <td>
+            @Html.DisplayNameFor(model => model.Moto.Kilometrage)
+        </td>
+        <th>
+            @Html.DisplayNameFor(model => model.FraisDeLocation)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Nom)
+            @Html.DisplayNameFor(model => model.Date_debut)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Prenom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Adresse)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroTel)
+            @Html.DisplayNameFor(model => model.Date_fin)
         </th>
         <th></th>
     </tr>
@@ -38,26 +36,33 @@
             @Html.DisplayFor(modelItem => item.Client.Nom)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Moto.Carburant)
+            @Html.DisplayFor(modelItem => item.Moto.IDMoto)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Nom)
+            @Html.DisplayFor(modelItem => item.Moto.Kilometrage)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Prenom)
+            @Html.DisplayFor(modelItem => item.FraisDeLocation)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Adresse)
+            @Html.DisplayFor(modelItem => item.Date_debut)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NumeroTel)
+            @Html.DisplayFor(modelItem => item.Date_fin)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDLocation }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IDLocation }) |
+        <td class="btn alert-info">
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDLocation }) 
+
+        </td>
+        <td class="btn alert-danger">
+
             @Html.ActionLink("Delete", "Delete", new { id=item.IDLocation })
         </td>
     </tr>
 }
 
 </table>
+<h5>Veuillez ajouter une location : </h5>
+<button class="btn alert-success">
+    @Html.ActionLink("Ajouter", "Create")
+</button>
