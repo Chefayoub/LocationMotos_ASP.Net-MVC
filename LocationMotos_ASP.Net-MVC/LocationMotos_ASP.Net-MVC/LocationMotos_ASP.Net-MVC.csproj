@@ -193,7 +193,6 @@
     <Compile Include="Models\LocMotoDbContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Marque.cs" />
-    <Compile Include="Models\Marques.cs" />
     <Compile Include="Models\Moto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -259,8 +258,7 @@
     <Content Include="Views\Motos\Delete.cshtml" />
     <Content Include="Views\Motos\Edit.cshtml" />
     <Content Include="Views\Motos\Index.cshtml" />
-    <Content Include="Views\Home\Trouve.cshtml" />
-    <Content Include="Views\Home\NonTrouve.cshtml" />
+    <Content Include="Views\Home\ChercheMoto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

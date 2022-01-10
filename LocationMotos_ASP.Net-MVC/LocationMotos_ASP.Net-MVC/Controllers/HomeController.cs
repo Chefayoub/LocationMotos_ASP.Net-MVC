@@ -51,18 +51,20 @@ namespace LocationMotos_ASP.Net_MVC.Controllers
         }
 
         [Route("/Home/ChercheMoto/{id}")]
-        public ActionResult ChercheMoto(int id)
+        public ActionResult ChercheMoto(string id)
         {
-            ViewBag.MarqueM = id;
-            Marques marques = new Marques();
-            Marque marque = marques.ObtenirListeMoto().FirstOrDefault(c => c.IDMarque == id);
-            if (marque != null)
-            {
-                ViewBag.MarqueM = marque.MarqueM;
-                ViewBag.Model = marque.Model;
-                return View("Trouve");
-            }
-            return View("NonTrouve");
+            ViewBag.Message = "Bienvenue";
+            ViewBag.id = id.ToString();
+
+            var motos = db.Motos.ToList();
+            var marques = db.Marques.ToList();
+
+            var rep = from c in motos
+                      join r in marques on c.IDMarque equals r.IDMarque
+                      where c.Carburant == id
+                      select new LocationMotos_ASP.Net_MVC.ViewModels.AfficheMotoViewModels { motoInfo = c, marqueInfo = r };
+
+            return View(rep);
         }
     }
 }

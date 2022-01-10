@@ -1,0 +1,80 @@
+﻿@model IEnumerable<LocationMotos_ASP.Net_MVC.ViewModels.AfficheMotoViewModels>
+@{
+    ViewBag.Title = "Recherche table";
+}
+
+<div class="jumbotron">
+    <h2 style="text-align:center">Bienvenue chez Universal Riders Rent</h2>
+    <p style="text-align:center" class="lead">Veuillez vous connecter ou créer un compte pour louer une moto.</p>
+</div>
+
+<h2>Liste de nos motos</h2>
+<p>
+    Vous avez fait une recherche sur les véhicule equiper de moteur : @ViewBag.id
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.marqueInfo.IDMarque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.IDMoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marqueInfo.MarqueM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marqueInfo.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.Carburant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.Kilometrage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motoInfo.Disponible)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.marqueInfo.IDMarque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.IDMoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marqueInfo.MarqueM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marqueInfo.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.Carburant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.Kilometrage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motoInfo.Disponible)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="row">
+    <div class="col-md-4 alert-warning">
+        <h5 class="text">Recherche que les motos avec un moteur <strong>Diesel</strong></h5>
+        <button class="btn-sm alert btn alert-info" onclick="window.location.href = 'https://localhost:44336/Home/ChercheMoto/Diesel';"> Recherche sur une table</button>
+    </div>
+    <div class="col-md-4 alert-warning">
+        <h5>Recherche que les motos avec un moteur <strong>Essence</strong></h5>
+        <button class="btn-sm alert btn alert-info" onclick="window.location.href = 'https://localhost:44336/Home/ChercheMoto/Essence';"> Recherche sur une table</button>
+    </div>
+</div>

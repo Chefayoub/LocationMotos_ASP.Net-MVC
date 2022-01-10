@@ -68,9 +68,12 @@
 
 
 <div class="row">
-    <div class="col-md-4">
-        <h4>Recherche sur la table moto</h4>
-
-        <button class="btn-toolbar"> @Html.ActionLink("Recherche sur la table", "ChercheMoto", "Home") </button>
+    <div class="col-md-4 alert-warning">
+        <h5 class="text">Recherche que les motos avec un moteur <strong>Diesel</strong></h5>
+        <button class="btn-sm alert btn alert-info" onclick="window.location.href = 'https://localhost:44336/Home/ChercheMoto/Diesel';"> Recherche sur la table</button>
+    </div>
+    <div class="col-md-4 alert-warning">
+        <h5>Recherche que les motos avec un moteur <strong>Essence</strong></h5>
+        <button class="btn-sm alert btn alert-info" onclick="window.location.href = 'https://localhost:44336/Home/ChercheMoto/Essence';"> Recherche sur la table</button>
     </div>
 </div>
