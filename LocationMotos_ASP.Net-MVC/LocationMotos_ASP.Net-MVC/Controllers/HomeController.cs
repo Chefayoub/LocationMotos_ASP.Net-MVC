@@ -29,6 +29,7 @@ namespace LocationMotos_ASP.Net_MVC.Controllers
 
             var rep = from c in marques
                       join r in motos on c.IDMarque equals r.IDMarque
+                      where r.Disponible == "oui"
                       select new LocationMotos_ASP.Net_MVC.ViewModels.AfficheMotoViewModels { marqueInfo = c, motoInfo = r };
 
             return View(rep);
@@ -61,7 +62,7 @@ namespace LocationMotos_ASP.Net_MVC.Controllers
 
             var rep = from c in motos
                       join r in marques on c.IDMarque equals r.IDMarque
-                      where c.Carburant == id
+                      where c.Carburant == id && c.Disponible == "oui"
                       select new LocationMotos_ASP.Net_MVC.ViewModels.AfficheMotoViewModels { motoInfo = c, marqueInfo = r };
 
             return View(rep);

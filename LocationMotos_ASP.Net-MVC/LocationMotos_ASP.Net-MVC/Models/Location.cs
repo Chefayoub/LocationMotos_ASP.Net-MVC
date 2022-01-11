@@ -20,6 +20,7 @@ namespace LocationMotos_ASP.Net_MVC.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Date_debut { get; set; }
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         [Display(Name = "Date fin")]
         public DateTime Date_fin { get; set; }
 
