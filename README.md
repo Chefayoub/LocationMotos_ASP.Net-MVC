@@ -4,7 +4,7 @@ Subject :
 
 It is a motorcycle rental application. You can manage rentals from different customers. 
 
-Programming language : C# + winform , Microsoft SQL server
+Programming language : Asp.Net MVC , Microsoft SQL server
 
 Language : French
 
